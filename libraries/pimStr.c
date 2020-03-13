@@ -239,5 +239,6 @@ char* delSpace(char* s){
             k++;
         }
     }
+    mass[k]='\0';
     return mass;
 }

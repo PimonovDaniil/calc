@@ -13,6 +13,7 @@ int main()
     printf("¬ведите выражение: ");
     char* s = readLine();
     s = delSpace(s); //”дал€ем все пробелы, чтобы не мешали
+    printf("|%s|",s);
     if(checkSymStr(s)){//если в строке допустимые символы
 
     }
