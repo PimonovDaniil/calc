@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include "pimStr.h"
 /**Библиотека позволяющая работать с числами как со строками*/
 
 
@@ -28,7 +32,7 @@ int bolsheChisl(char* s1,char* s2){
 }
 
 /**Складывает 2 положительных числа*/
-char* plus(char* str1, char* str2){
+char* plusStrChisl(char* str1, char* str2){
     char* s1;
     char* s2;
     if(bolsheChisl(revert(str1), revert(str2))){
@@ -66,4 +70,50 @@ char* plus(char* str1, char* str2){
     mass=(char*)realloc(mass,((len)*sizeof(char)));
     mass[len-1]='\0';
     return revert(mass);
+}
+
+/**Умножает 2 положительных числа*/
+char* multiply(char* str1, char* str2){
+    if(ravnStr(str1,"0")||ravnStr(str2,"0")){
+            return "0";
+    }else{
+        char* sum="0";
+        char* nol="";
+        char* s1;
+        char* s2;
+        if(bolsheChisl(revert(str1), revert(str2))){
+            s1=revert(str1);
+            s2=revert(str2);
+        }else{
+            s1=revert(str2);
+            s2=revert(str1);
+        }
+        //Как сумма, только много раз
+        for(int j=0;j<lenStr(s2);j++){
+            int len=0;
+            char* mass = (char*)realloc(mass,((len)*sizeof(char)));
+            int chisl=0;//складываем 3 числа
+            char mem='0';//запоминаем перенос разряда
+            for(int i=0; s1[i]!='\0';i++){
+                chisl=(s1[i]-48)*(s2[j]-48)+(mem-48);
+                len++;
+                mass=(char*)realloc(mass,((len)*sizeof(char)));
+                mass[len-1]=(chisl%10)+48;
+                chisl/=10;
+                mem=chisl+48;
+            }
+            if(mem!='0'){
+                len++;
+                mass=(char*)realloc(mass,((len)*sizeof(char)));
+                mass[len-1]=mem;
+            }
+            len++;
+            mass=(char*)realloc(mass,((len)*sizeof(char)));
+            mass[len-1]='\0';
+            mass=strPlus(nol,mass);
+            nol=strPlus(nol,"0");
+            sum=plusStrChisl(sum,revert(mass));
+        }
+        return sum;
+    }
 }

@@ -31,7 +31,7 @@ int main()
     //printf("%s",calc(s));
     char* s="lol";
     s++;
-    printf("%s",plus("101","800"));
+    printf("%s",multiply("43554654643","2"));
     //printf("%d",bolsheChisl("1230","321"));
     return 0;
 }
