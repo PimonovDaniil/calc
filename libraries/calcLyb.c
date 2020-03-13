@@ -37,7 +37,7 @@ int checkMathDeystvie(char* s){
     int res=1;
     char sym[lenStr(s)];
     sym[0]='\0';int k=0; int flag = 0;
-    /**чекнуть группы символов в середине строки*/
+    /*проверить допустимые группы символов в середине строки*/
     for(int i = 0;i <= lenStr(s);i++){
         if(checkZnack(s[i])){
             flag=1;

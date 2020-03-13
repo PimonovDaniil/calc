@@ -12,7 +12,7 @@ char* calc(char* mass){
     s = delSpace(s); //Удаляем все пробелы, чтобы не мешали
     //printf("|%s|",s);
     if(checkSymStr(s)){//если в строке допустимые символы
-        if(checkMathDeystvie(s)){
+        if(checkMathDeystvie(s)){//Праверка на допустимость действий
             return "стоп";
         }else{
             return "Были введены недопустимые для этого калькулятора действия!";
@@ -23,11 +23,15 @@ char* calc(char* mass){
     return "Этого не должно было случиться!!!";
 }
 
+/*Складывает 2 положительных числа*/
+//char plus()
+
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
     printf("Введите выражение: ");
-    char* s = readLine();
-    printf("%s",calc(s));
+    //char* s = readLine();
+    //printf("%s",calc(s));
+    printf("%s",revert("123"));
     return 0;
 }

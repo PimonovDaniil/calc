@@ -241,3 +241,15 @@ char* delSpace(char* s){
     mass[k]='\0';
     return mass;
 }
+
+/**переворачивает строку*/
+char* revert(char* s){
+    char* mass = NULL;
+    mass = (char*)realloc(mass,((lenStr(s)+1)*sizeof(char)));
+    mass[lenStr(s)]='\0'; int k=0;
+    for(int i = lenStr(s)-1;i>=0;i--){
+        mass[k]=s[i];
+        k++;
+    }
+    return mass;
+}

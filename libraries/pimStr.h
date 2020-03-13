@@ -36,3 +36,7 @@ char *readLine();
 
 /**функция удаляет все пробелы в строке*/
 char* delSpace(char* s);
+
+
+/**переворачивает строку*/
+char* revert(char* s);
