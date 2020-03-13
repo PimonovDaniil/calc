@@ -8,12 +8,12 @@
 
 1584091092 c:\disk_d\программирование\c\codeblock\calc\pimstr.h
 
-1584094295 source:c:\disk_d\программирование\c\codeblock\calc\main.c
+1584095200 source:c:\disk_d\программирование\c\codeblock\calc\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<windows.h>
-	"pimStr.h"
+	"libraries/pimStr.h"
 
 1584094295 source:c:\disk_d\программирование\c\codeblock\calc\calclyb.c
 	<stdio.h>
@@ -24,4 +24,23 @@
 	"calcLyb.h"
 
 1584094295 c:\disk_d\программирование\c\codeblock\calc\calclyb.h
+
+1584094295 source:c:\disk_d\программирование\c\codeblock\calc\libraries\calclyb.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<windows.h>
+	"pimStr.h"
+	"calcLyb.h"
+
+1584091092 c:\disk_d\программирование\c\codeblock\calc\libraries\pimstr.h
+
+1584094295 c:\disk_d\программирование\c\codeblock\calc\libraries\calclyb.h
+
+1584091092 source:c:\disk_d\программирование\c\codeblock\calc\libraries\pimstr.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<windows.h>
+	"pimStr.h"
 
