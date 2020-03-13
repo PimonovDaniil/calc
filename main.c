@@ -1,21 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-#include <windows.h>
 #include "libraries/pimStr.h"
+#include "libraries/calcLyb.h"
 
+
+char* calc(char* mass){
+    char* s = NULL;
+    s = (char*)realloc(s,((lenStr(mass)+1)*sizeof(char)));
+    copyStr2(s,mass);
+    s = delSpace(s); //Удаляем все пробелы, чтобы не мешали
+    //printf("|%s|",s);
+    if(checkSymStr(s)){//если в строке допустимые символы
+        if(checkMathDeystvie(s)){
+            return "стоп";
+        }else{
+            return "Были введены недопустимые для этого калькулятора действия!";
+        }
+    }else{
+        return "Были введены недопустимые символы!";
+    }
+    return "Этого не должно было случиться!!!";
+}
 
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
     printf("Введите выражение: ");
     char* s = readLine();
-    s = delSpace(s); //Удаляем все пробелы, чтобы не мешали
-    printf("|%s|",s);
-    if(checkSymStr(s)){//если в строке допустимые символы
-
-    }
+    printf("%s",calc(s));
     return 0;
 }
