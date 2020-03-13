@@ -194,3 +194,48 @@ char **splitStr(char* s,int* N){
     *N=len;
     return mass;
 }
+
+/*сравнивает 2 строки*/
+int ravnStr(char s1[999], char s2[999]){
+    int res=1;
+    int k=0;
+    while(s1[k]!='\0'){
+        if(s1[k]!=s2[k]){
+           res=0;
+           break;
+        }
+        k++;
+    }
+    if(s1[k]!=s2[k]){
+           res=0;
+    }
+    return res;
+}
+
+///возвращает одну, считанную с консоли, строку
+char *readLine(){
+    char *s = malloc(999);
+    s[0]='\0';
+    char mem;
+    scanf("%c",&mem);
+    for(int i=0;mem!='\n';i++){
+        s[i]=mem;
+        s[i+1]='\0';
+        scanf("%c",&mem);
+    }
+    return s;
+}
+
+/**функция удаляет все пробелы в строке*/
+char* delSpace(char* s){
+    char* mass = NULL;
+    mass = (char*)realloc(mass,((lenStr(s)+1)*sizeof(char)));
+    int k = 0;
+    for(int i = 0;i < lenStr(s);i++){
+        if(s[i]!=' '){
+            mass[k]=s[i];
+            k++;
+        }
+    }
+    return mass;
+}
