@@ -5,7 +5,6 @@
 #include "pimStr.h"
 
 
-
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
@@ -13,6 +12,7 @@ int main()
     SetConsoleOutputCP(1251);
     printf("¬ведите выражение: ");
     char* s = readLine();
-    printf("|%s|",delSpace(s));
+    s=delSpace(s); //”дал€ем все пробелы, чтобы не мешали.
+    printf("%d", checkSymStr(s));
     return 0;
 }

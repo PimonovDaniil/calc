@@ -1,17 +1,27 @@
 # depslib dependency file v1.0
-1584087410 source:c:\disk_d\программирование\c\codeblock\calc\pimstr.c
+1584091092 source:c:\disk_d\программирование\c\codeblock\calc\pimstr.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<windows.h>
 	"pimStr.h"
 
-1584087410 c:\disk_d\программирование\c\codeblock\calc\pimstr.h
+1584091092 c:\disk_d\программирование\c\codeblock\calc\pimstr.h
 
-1584087647 source:c:\disk_d\программирование\c\codeblock\calc\main.c
+1584094295 source:c:\disk_d\программирование\c\codeblock\calc\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<windows.h>
 	"pimStr.h"
+
+1584094295 source:c:\disk_d\программирование\c\codeblock\calc\calclyb.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<windows.h>
+	"pimStr.h"
+	"calcLyb.h"
+
+1584094295 c:\disk_d\программирование\c\codeblock\calc\calclyb.h
 

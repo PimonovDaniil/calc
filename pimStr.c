@@ -4,6 +4,8 @@
 #include <windows.h>
 #include "pimStr.h"
 
+/**Библиотека с функциями для работы со строками*/
+
 /**Складывает две строки*/
 char* strPlus(char* s1,char* s2){
     char* mass = NULL;
