@@ -12,7 +12,9 @@ int main()
     SetConsoleOutputCP(1251);
     printf("Введите выражение: ");
     char* s = readLine();
-    s=delSpace(s); //Удаляем все пробелы, чтобы не мешали.
-    printf("%d", checkSymStr(s));
+    s = delSpace(s); //Удаляем все пробелы, чтобы не мешали
+    if(checkSymStr(s)){//если в строке допустимые символы
+
+    }
     return 0;
 }
