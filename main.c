@@ -23,15 +23,15 @@ char* calc(char* mass){
     return "Этого не должно было случиться!!!";
 }
 
-/*Складывает 2 положительных числа*/
-//char plus()
-
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
     printf("Введите выражение: ");
     //char* s = readLine();
     //printf("%s",calc(s));
-    printf("%s",revert("123"));
+    char* s="lol";
+    s++;
+    printf("%s",plus("101","800"));
+    //printf("%d",bolsheChisl("1230","321"));
     return 0;
 }
