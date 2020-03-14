@@ -12,3 +12,6 @@ char* multiply(char* str1, char* str2);
 
 /**вычитает 2 положительных числа. (из большего вычитает меньшее!!!)*/
 char* minusStrChisl(char* str1, char* str2);
+
+/**Делит(целочисленно) одно положительное число на другое(Важен порядок!!! s1/s2)*/
+char* delenie(char* str1, char* str2);

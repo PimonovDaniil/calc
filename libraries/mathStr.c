@@ -182,3 +182,63 @@ char* minusStrChisl(char* str1, char* str2){
     }
     return mass;
 }
+
+
+/**Делит(целочисленно) одно положительное число на другое(Важен порядок!!! s1/s2)*/
+char* delenie(char* str1, char* str2){
+    if(ravnStr(str1,"0")){
+        return "0";
+    }
+    if(ravnStr(str2,"0")){
+        return "\nДеление на 0!!!\n";
+    }
+    int max=-1;
+    if(lenStr(str1)>lenStr(str2)){
+        max=lenStr(str1);
+    }else{
+        max=lenStr(str2);
+    }
+    char* s1=malloc(max+1);
+    char* s2=malloc(max+1);
+    s1=str1;
+    s2=str2;
+    char* chisl= malloc(lenStr(s1)+1);
+    copyStr2(chisl,s1);
+    char* res="";//результат
+    while(bolsheChisl(chisl,s2)){
+        int i=0;
+        for( i=0;lenStr(chisl);i++){
+            if(bolsheChisl(copyStr(chisl,0,i),s2)){
+                break;
+            }
+        }
+        char* mem = copyStr(chisl,0,i);
+        //printf("%s\n",mem);
+        chisl+=lenStr(mem);
+        char* resMem = "0";
+        while(bolsheChisl(mem,s2)){
+                printf(" \b");
+            mem=minusStrChisl(mem,s2);
+            printf(" \b");
+            resMem=plusStrChisl(resMem,"1");
+            printf(" \b");
+        }
+        res=strPlus(res,resMem);
+        if(ravnStr(mem,"0")){
+            mem++;
+        }
+        /**сколько нулей придётся дописать*/
+        chisl=strPlus(mem,chisl);
+        char* kol="";
+        for(int i=lenStr(mem);chisl[i]!='\0';i++){
+            if(bolsheChisl(copyStr(chisl,0,i),s2)){
+                break;
+            }else{
+                kol=strPlus(kol,"0");
+            }
+        }
+        res=strPlus(res,kol);
+    }
+
+    return res;
+}
