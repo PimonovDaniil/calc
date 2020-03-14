@@ -117,3 +117,50 @@ char* multiply(char* str1, char* str2){
         return sum;
     }
 }
+
+
+/**вычитает 2 положительных числа. (из большего вычитает меньшее!!!)*/
+char* minusStrChisl(char* str1, char* str2){
+    char* s1;
+    char* s2;
+    if(bolsheChisl(revert(str1), revert(str2))){
+        s1=revert(str1);
+        s2=revert(str2);
+    }else{
+        s1=revert(str2);
+        s2=revert(str1);
+    }
+    char nol[lenStr(s1)-lenStr(s2)+1];
+    nol[lenStr(s1)-lenStr(s2)]='\0';
+    for(int i=0;i<lenStr(s1)-lenStr(s2);i++){
+        nol[i]='0';
+    }
+    s2=strPlus(s2,nol);//дописываем нули у меньшего числа
+    int len=0;
+    char* mass = (char*)realloc(mass,((len)*sizeof(char)));
+    int chisl=0;
+    for(int i = 0;s1[i]!='\0';i++){
+        if(s1[i]==47){
+            s1[i]=57;
+            s1[i+1] = s1[i+1]-1;
+        }
+        if(((s1[i]-48)-(s2[i]-48))<0){
+            s1[i]=s1[i]+10;
+            s1[i+1] = s1[i+1]-1;
+        }
+        len++;
+        mass=(char*)realloc(mass,((len)*sizeof(char)));
+        mass[len-1]=(s1[i]-48)-(s2[i]-48)+48;
+    }
+    len++;
+    mass=(char*)realloc(mass,((len)*sizeof(char)));
+    mass[len-1]='\0';
+    mass=revert(mass);
+    while(mass[0]=='0'){
+        mass++;
+    }
+    if(ravnStr(trim(mass),"")){
+        mass=strPlus(mass,"0");
+    }
+    return mass;
+}

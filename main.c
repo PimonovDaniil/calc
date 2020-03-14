@@ -3,7 +3,7 @@
 #include <locale.h>
 #include "libraries/pimStr.h"
 #include "libraries/calcLyb.h"
-
+/*https://github.com/PimonovDaniil/calc*/
 
 char* calc(char* mass){
     char* s = NULL;
@@ -23,6 +23,8 @@ char* calc(char* mass){
     return "Этого не должно было случиться!!!";
 }
 
+
+
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
@@ -31,7 +33,7 @@ int main()
     //printf("%s",calc(s));
     char* s="lol";
     s++;
-    printf("%s",multiply("43554654643","2"));
+    printf("%s",minusStrChisl("10","15"));
     //printf("%d",bolsheChisl("1230","321"));
     return 0;
 }
