@@ -8,7 +8,7 @@ int bolsheChisl(char* s1,char* s2);
 char* plusStrChisl(char* str1, char* str2);
 
 /**Умножает 2 положительных числа*/
-char* multiply(char* str1, char* str2)
+char* multiply(char* str1, char* str2);
 
 /**вычитает 2 положительных числа. (из большего вычитает меньшее!!!)*/
 char* minusStrChisl(char* str1, char* str2);

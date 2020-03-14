@@ -33,8 +33,14 @@ int bolsheChisl(char* s1,char* s2){
 
 /**Складывает 2 положительных числа*/
 char* plusStrChisl(char* str1, char* str2){
-    char* s1;
-    char* s2;
+    int max=-1;
+    if(lenStr(str1)>lenStr(str2)){
+        max=lenStr(str1);
+    }else{
+        max=lenStr(str2);
+    }
+    char* s1=malloc(max+1);
+    char* s2=malloc(max+1);
     if(bolsheChisl(revert(str1), revert(str2))){
         s1=revert(str1);
         s2=revert(str2);
@@ -79,8 +85,14 @@ char* multiply(char* str1, char* str2){
     }else{
         char* sum="0";
         char* nol="";
-        char* s1;
-        char* s2;
+        int max=-1;
+        if(lenStr(str1)>lenStr(str2)){
+            max=lenStr(str1);
+        }else{
+            max=lenStr(str2);
+        }
+        char* s1=malloc(max+1);
+        char* s2=malloc(max+1);
         if(bolsheChisl(revert(str1), revert(str2))){
             s1=revert(str1);
             s2=revert(str2);
@@ -121,8 +133,14 @@ char* multiply(char* str1, char* str2){
 
 /**вычитает 2 положительных числа. (из большего вычитает меньшее!!!)*/
 char* minusStrChisl(char* str1, char* str2){
-    char* s1;
-    char* s2;
+    int max=-1;
+    if(lenStr(str1)>lenStr(str2)){
+        max=lenStr(str1);
+    }else{
+        max=lenStr(str2);
+    }
+    char* s1=malloc(max+1);
+    char* s2=malloc(max+1);
     if(bolsheChisl(revert(str1), revert(str2))){
         s1=revert(str1);
         s2=revert(str2);

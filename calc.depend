@@ -10,7 +10,7 @@
 
 1584101743 c:\disk_d\программирование\c\codeblock\calc\libraries\calclyb.h
 
-1584125426 source:c:\disk_d\программирование\c\codeblock\calc\libraries\mathstr.c
+1584210918 source:c:\disk_d\программирование\c\codeblock\calc\libraries\mathstr.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -22,10 +22,13 @@
 	<locale.h>
 	"pimStr.h"
 
-1584198689 source:c:\disk_d\программирование\c\codeblock\calc\main.c
+1584210890 source:c:\disk_d\программирование\c\codeblock\calc\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	"libraries/pimStr.h"
 	"libraries/calcLyb.h"
+	"libraries/mathStr.h"
+
+1584204602 c:\disk_d\программирование\c\codeblock\calc\libraries\mathstr.h
 

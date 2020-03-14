@@ -3,7 +3,11 @@
 #include <locale.h>
 #include "libraries/pimStr.h"
 #include "libraries/calcLyb.h"
-/*https://github.com/PimonovDaniil/calc*/
+#include "libraries/mathStr.h"
+
+
+
+/**https://github.com/PimonovDaniil/calc*/
 
 char* calc(char* mass){
     char* s = NULL;
@@ -25,15 +29,29 @@ char* calc(char* mass){
 
 
 
+/**ƒелит(целочисленно) одно положительное число на другое(¬ажен пор€док!!! s1/s2)*/
+char* delenie(char* str1, char* str2){
+    char* chisl="0";
+    char* s1 = str1;
+    char* s2 = str2;
+    char* mass = (char*)realloc(mass,((0)*sizeof(char)));
+
+    while(1){
+        chisl=plusStrChisl(chisl,"9999999999999999999");
+        printf("%s\n",chisl);
+    }
+    return chisl;
+}
+
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
-    printf("¬ведите выражение: ");
+    printf("¬ведите выражение: \n");
     //char* s = readLine();
     //printf("%s",calc(s));
-    char* s="lol";
-    s++;
-    printf("%s",minusStrChisl("10","15"));
+   // printf("|%s|\n",s);
+    //printf("%d\n",bolsheChisl("311", "10"));
+    printf("%s",delenie("1999999999321","1999999999321"));
     //printf("%d",bolsheChisl("1230","321"));
     return 0;
 }
