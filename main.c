@@ -31,14 +31,21 @@ char* calc(char* mass){
 
 /**Делит(целочисленно) одно положительное число на другое(Важен порядок!!! s1/s2)*/
 char* delenie(char* str1, char* str2){
+    int max=-1;
+    if(lenStr(str1)>lenStr(str2)){
+        max=lenStr(str1);
+    }else{
+        max=lenStr(str2);
+    }
+    char* s1=malloc(max+1);
+    char* s2=malloc(max+1);
+    s1=str1;
+    s2=str2;
     char* chisl="0";
-    char* s1 = str1;
-    char* s2 = str2;
-    char* mass = (char*)realloc(mass,((0)*sizeof(char)));
-
-    while(1){
-        chisl=plusStrChisl(chisl,"9999999999999999999");
-        printf("%s\n",chisl);
+    while(bolsheChisl(s1,s2)){
+        chisl=plusStrChisl(chisl,"1");
+        s1=minusStrChisl(s1,s2);
+        printf(" \b");
     }
     return chisl;
 }
@@ -51,7 +58,7 @@ int main()
     //printf("%s",calc(s));
    // printf("|%s|\n",s);
     //printf("%d\n",bolsheChisl("311", "10"));
-    printf("%s",delenie("1999999999321","1999999999321"));
+    printf("%s",delenie("1234599","1"));
     //printf("%d",bolsheChisl("1230","321"));
     return 0;
 }
