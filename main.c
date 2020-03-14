@@ -27,6 +27,7 @@ char* calc(char* mass){
     return "Этого не должно было случиться!!!";
 }
 
+
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
@@ -35,7 +36,7 @@ int main()
     //printf("%s",calc(s));
    // printf("|%s|\n",s);
     //printf("%d\n",bolsheChisl("311", "10"));
-    printf("%s\n",delenie("132424535623","0"));
+    printf("%s\n",deystv("-2",'+',"-1"));
     //printf("%d",bolsheChisl("1230","321"));
     return 0;
 }

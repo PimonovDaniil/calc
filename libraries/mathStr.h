@@ -15,3 +15,6 @@ char* minusStrChisl(char* str1, char* str2);
 
 /**Делит(целочисленно) одно положительное число на другое(Важен порядок!!! s1/s2)*/
 char* delenie(char* str1, char* str2);
+
+/**функция выполняет действие*/
+char* deystv(char* str1,char sym,char* str2);
