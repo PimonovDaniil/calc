@@ -1,16 +1,15 @@
 # depslib dependency file v1.0
-1584105580 source:c:\disk_d\программирование\c\codeblock\calc\libraries\calclyb.c
+1584229949 source:c:\disk_d\программирование\c\codeblock\calc\libraries\calclyb.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	"pimStr.h"
-	"calcLyb.h"
 
 1584106516 c:\disk_d\программирование\c\codeblock\calc\libraries\pimstr.h
 
-1584101743 c:\disk_d\программирование\c\codeblock\calc\libraries\calclyb.h
+1584228444 c:\disk_d\программирование\c\codeblock\calc\libraries\calclyb.h
 
-1584223163 source:c:\disk_d\программирование\c\codeblock\calc\libraries\mathstr.c
+1584228444 source:c:\disk_d\программирование\c\codeblock\calc\libraries\mathstr.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -22,7 +21,7 @@
 	<locale.h>
 	"pimStr.h"
 
-1584226834 source:c:\disk_d\программирование\c\codeblock\calc\main.c
+1584228890 source:c:\disk_d\программирование\c\codeblock\calc\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -30,5 +29,5 @@
 	"libraries/calcLyb.h"
 	"libraries/mathStr.h"
 
-1584221732 c:\disk_d\программирование\c\codeblock\calc\libraries\mathstr.h
+1584227543 c:\disk_d\программирование\c\codeblock\calc\libraries\mathstr.h
 

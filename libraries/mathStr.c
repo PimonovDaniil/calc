@@ -243,6 +243,7 @@ char* delenie(char* str1, char* str2){
 }
 
 /**функция выполняет действие*/
+/**принимает на вход два числа и действие между ними*/
 char* deystv(char* str1,char sym,char* str2){
     if(sym=='+'){
         int m1=1;
@@ -266,7 +267,6 @@ char* deystv(char* str1,char sym,char* str2){
                 return minusStrChisl(str1,str2);
             }
         }
-
         return plusStrChisl(str1,str2);
     }else if(sym=='*'){
         int m1=1;

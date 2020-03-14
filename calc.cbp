@@ -31,6 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="libraries/calcLyb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libraries/calcLyb.h" />
+		<Unit filename="libraries/mathStr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libraries/mathStr.h" />
+		<Unit filename="libraries/pimStr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libraries/pimStr.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -17,4 +17,5 @@ char* minusStrChisl(char* str1, char* str2);
 char* delenie(char* str1, char* str2);
 
 /**функция выполняет действие*/
+/**принимает на вход два числа и действие между ними*/
 char* deystv(char* str1,char sym,char* str2);

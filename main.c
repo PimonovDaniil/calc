@@ -4,10 +4,9 @@
 #include "libraries/pimStr.h"
 #include "libraries/calcLyb.h"
 #include "libraries/mathStr.h"
-
-
-
 /**https://github.com/PimonovDaniil/calc*/
+
+
 
 char* calc(char* mass){
     char* s = NULL;
@@ -28,15 +27,12 @@ char* calc(char* mass){
 }
 
 
+
+
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
     printf("¬ведите выражение: \n");
-    //char* s = readLine();
-    //printf("%s",calc(s));
-   // printf("|%s|\n",s);
-    //printf("%d\n",bolsheChisl("311", "10"));
-    printf("%s\n",deystv("-2",'+',"-1"));
-    //printf("%d",bolsheChisl("1230","321"));
+    printf("%s\n",vichisl("+22345*45656+1243435-5645",6));
     return 0;
 }

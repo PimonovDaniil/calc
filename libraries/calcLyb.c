@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include "pimStr.h"
-#include "calcLyb.h"
+
 
 /**Проверяет принадлежит ли символ к допустимому знаку*/
 int checkZnack(char s){
@@ -63,4 +63,41 @@ int checkMathDeystvie(char* s){
         res=0;
     }
     return res;
+}
+
+
+char* vichisl(char* s, int num){
+    if(num==0){
+        return s;
+    }
+    char* res;
+    int i1=0;
+    for(i1=num-1;i1>=0;i1--){
+        res=copyStr(s,i1,num-1);
+        if(checkZnack(res[0])){
+            break;
+        }
+    }
+    if(res[0]!='-'){
+        i1++;
+        res++;
+    }
+
+    char* res2;
+    int j1=0;
+    for(j1=num+1;s[j1]!='\0';j1++){
+        res2=copyStr(s,num+1,j1);
+        if(checkZnack(res2[lenStr(res2)-1]) && (j1!=num+1)){
+            break;
+        }
+    }
+    j1--;
+    res2=copyStr(s,num+1,j1);
+    char* str1="";
+    str1=copyStr(s,0,i1-1);
+    char* str2="";
+    if(s[j1+1]!='\0'){
+        str2=copyStr(s,j1+1,lenStr(s)-1);
+    }
+    return strPlus(str1,strPlus(deystv(res,s[num],res2),str2));
 }
