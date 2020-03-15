@@ -110,7 +110,5 @@ char* vichisl(char* s, int num){
     if(s[j1+1]!='\0'){
         str2=copyStr(s,j1+1,lenStr(s)-1);
     }
-    //printf("\n|%s|\n|%s|\n",res,res2);
-    //printf("%s\n",dey);
     return strPlus(str1,strPlus(dey,str2));
 }

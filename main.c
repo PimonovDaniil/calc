@@ -6,8 +6,15 @@
 #include "libraries/mathStr.h"
 /**https://github.com/PimonovDaniil/calc*/
 
+/**Пимонов Даниил гр439-2*/
+/**Целочисленный калькулятор для которого приемлемы
+действия - + * / *- /- и приемлем знак - перед первым числом*/
+/*пример для теста
+-22345+45656+1243*435*-5645+23434-23445/-2324234/2345324+34-325324321*32442-234321/-324
+результат -10557223854105*/
 
 
+/**передаётся выражение, возвращается результат выражения*/
 char* calc(char* mass){
     char* s = NULL;
     s = (char*)realloc(s,((lenStr(mass)+1)*sizeof(char)));
@@ -22,7 +29,7 @@ char* calc(char* mass){
                     if((s[i]=='/')||(s[i]=='*')){
                         flag=1;
                         s=vichisl(s,i);
-                        printf("%s\n",s);
+                        //printf("%s\n",s);
                         break;
                     }
                 }
@@ -34,7 +41,7 @@ char* calc(char* mass){
                     if(((s[i]=='+')||(s[i]=='-'))&&(i!=0)){
                         flag=1;
                         s=vichisl(s,i);
-                        printf("%s\n",s);
+                        //printf("%s\n",s);
                         break;
                     }
                 }
@@ -55,11 +62,10 @@ char* calc(char* mass){
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
+    printf("Пимонов Даниил гр439-2 программа калькулятор\nЦелочисленный калькулятор для которого приемлемы\nдействия - + * / *- /- и приемлем знак - перед первым числом\n\n");
     printf("Введите выражение: ");
     char* s=readLine();
     printf("Результат = %s\n",calc(s));
-    //printf("%s",deystv("-234321",'+',"-324"));
-    //723
-    //printf("%s",minusStrChisl("723","324"));
+    //getch();
     return 0;
 }
