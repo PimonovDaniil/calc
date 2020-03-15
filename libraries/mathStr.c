@@ -133,6 +133,13 @@ char* multiply(char* str1, char* str2){
 
 /**вычитает 2 положительных числа. (из большего вычитает меньшее!!!)*/
 char* minusStrChisl(char* str1, char* str2){
+   /* printf("%s\n%s\n",str1,str2);
+    if(ravnStr(str1,"0")){
+        return str2;
+    }
+    if(ravnStr(str2,"0")){
+        return str1;
+    }*/
     int max=-1;
     if(lenStr(str1)>lenStr(str2)){
         max=lenStr(str1);
@@ -252,6 +259,8 @@ char* delenie(char* str1, char* str2){
 /**функция выполняет действие*/
 /**принимает на вход два числа и действие между ними*/
 char* deystv(char* str1,char sym,char* str2){
+    //printf("%s\n%s\n",str1,str2);
+    printf(" \b");//Это важный элемент, отвечающий за пинг.
     if(sym=='+'){
         int m1=1;
         int m2=1;

@@ -66,6 +66,6 @@ int main()
     printf("Введите выражение: ");
     char* s=readLine();
     printf("Результат = %s\n",calc(s));
-    //getch();
+    getch();
     return 0;
 }
