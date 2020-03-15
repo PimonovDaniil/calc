@@ -239,6 +239,9 @@ char* delenie(char* str1, char* str2){
         }
         res=strPlus(res,kol);
     }
+    if(trim(res)==""){
+        res=strPlus(trim(res),"0");
+    }
     return res;
 }
 
@@ -262,7 +265,12 @@ char* deystv(char* str1,char sym,char* str2){
             return plusStrChisl(str1,str2);
         }else{
             if(bolsheChisl(str1,str2)){
-                return strPlus("-",minusStrChisl(str1,str2));
+                if(!ravnStr("0",minusStrChisl(str1,str2))){
+                    return strPlus("-",minusStrChisl(str1,str2));
+                }else{
+                    return minusStrChisl(str1,str2);
+                }
+
             }else{
                 return minusStrChisl(str1,str2);
             }
@@ -281,7 +289,11 @@ char* deystv(char* str1,char sym,char* str2){
         }
         m1=m1*m2;
         if(m1==-1){
-            return strPlus("-",multiply(str1,str2));
+            if(!ravnStr(multiply(str1,str2),"0")){
+                return strPlus("-",multiply(str1,str2));
+            }else{
+                return multiply(str1,str2);
+            }
         }
         return multiply(str1,str2);
     }else if(sym=='-'){
@@ -297,20 +309,33 @@ char* deystv(char* str1,char sym,char* str2){
             m1=-1;
         }
         if((m1==-1) && (m2==-1)){
-            return strPlus("-",plusStrChisl(str1,str2));
+            if(!ravnStr("0",plusStrChisl(str1,str2))){
+                return strPlus("-",plusStrChisl(str1,str2));
+            }else{
+                return plusStrChisl(str1,str2);
+            }
         }
         if(m1==1){
             if(bolsheChisl(str1,str2)){
                  return minusStrChisl(str1,str2);
             }else{
-                return strPlus("-",minusStrChisl(str1,str2));
+                if(!ravnStr("0",minusStrChisl(str1,str2))){
+                     return strPlus("-",minusStrChisl(str1,str2));
+                }else{
+                     return minusStrChisl(str1,str2);
+                }
             }
         }else{
-            return strPlus("-",plusStrChisl(str1,str2));
+            if(!ravnStr(plusStrChisl(str1,str2),"0")){
+                return strPlus("-",plusStrChisl(str1,str2));
+            }else{
+                return plusStrChisl(str1,str2);
+            }
         }
     }else if(sym=='/'){
         int m1=1;
         int m2=1;
+        //printf("%s\n%s\n",str1,str2);
         if (str1[0]=='-'){
             str1++;
             m1=-1;
@@ -320,8 +345,13 @@ char* deystv(char* str1,char sym,char* str2){
             m2=-1;
         }
         m1=m1*m2;
+
         if(m1==-1){
-            return strPlus("-",delenie(str1,str2));
+            if(!ravnStr(delenie(str1,str2),"0")){
+                return strPlus("-",delenie(str1,str2));
+            }else{
+                return delenie(str1,str2);
+            }
         }
         return delenie(str1,str2);
     }else{
