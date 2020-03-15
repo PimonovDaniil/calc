@@ -58,5 +58,8 @@ int main()
     printf("Введите выражение: ");
     char* s=readLine();
     printf("Результат = %s\n",calc(s));
+    //printf("%s",deystv("-234321",'+',"-324"));
+    //723
+    //printf("%s",minusStrChisl("723","324"));
     return 0;
 }

@@ -41,7 +41,7 @@ char* plusStrChisl(char* str1, char* str2){
     }
     char* s1=malloc(max+1);
     char* s2=malloc(max+1);
-    if(bolsheChisl(revert(str1), revert(str2))){
+    if(bolsheChisl((str1), (str2))){
         s1=revert(str1);
         s2=revert(str2);
     }else{
@@ -93,7 +93,7 @@ char* multiply(char* str1, char* str2){
         }
         char* s1=malloc(max+1);
         char* s2=malloc(max+1);
-        if(bolsheChisl(revert(str1), revert(str2))){
+        if(bolsheChisl((str1), (str2))){
             s1=revert(str1);
             s2=revert(str2);
         }else{
@@ -141,7 +141,7 @@ char* minusStrChisl(char* str1, char* str2){
     }
     char* s1=malloc(max+1);
     char* s2=malloc(max+1);
-    if(bolsheChisl(revert(str1), revert(str2))){
+    if(bolsheChisl((str1), (str2))){
         s1=revert(str1);
         s2=revert(str2);
     }else{
@@ -154,6 +154,7 @@ char* minusStrChisl(char* str1, char* str2){
         nol[i]='0';
     }
     s2=strPlus(s2,nol);//дописываем нули у меньшего числа
+    //printf("%s\n%s\n",s1,s2);
     int len=0;
     char* mass = (char*)realloc(mass,((len)*sizeof(char)));
     int chisl=0;
@@ -205,6 +206,7 @@ char* delenie(char* str1, char* str2){
     char* chisl= malloc(lenStr(s1)+1);
     copyStr2(chisl,s1);
     char* res="";//результат
+    printf("%s\n%s\n",s1,s2);
     while(bolsheChisl(chisl,s2)){
         int i=0;
         for( i=0;lenStr(chisl);i++){
@@ -219,6 +221,7 @@ char* delenie(char* str1, char* str2){
         while(bolsheChisl(mem,s2)){
             printf(" \b");
             mem=minusStrChisl(mem,s2);
+            printf("%s\n",mem);
             printf(" \b");
             resMem=plusStrChisl(resMem,"1");
             printf(" \b");
@@ -229,6 +232,7 @@ char* delenie(char* str1, char* str2){
         }
         /**сколько нулей придётся дописать*/
         chisl=strPlus(mem,chisl);
+
         char* kol="";
         for(int i=lenStr(mem);chisl[i]!='\0';i++){
             if(bolsheChisl(copyStr(chisl,0,i),s2)){
