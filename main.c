@@ -55,7 +55,8 @@ char* calc(char* mass){
 int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
-    printf("¬ведите выражение: \n");
-    printf("\n%s\n",calc("-22345+45656+1243*435*-5645+23434-23445"));
+    printf("¬ведите выражение: ");
+    char* s=readLine();
+    printf("–езультат = %s\n",calc(s));
     return 0;
 }
