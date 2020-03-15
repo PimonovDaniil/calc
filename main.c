@@ -13,10 +13,33 @@ char* calc(char* mass){
     s = (char*)realloc(s,((lenStr(mass)+1)*sizeof(char)));
     copyStr2(s,mass);
     s = delSpace(s); //”дал€ем все пробелы, чтобы не мешали
-    //printf("|%s|",s);
     if(checkSymStr(s)){//если в строке допустимые символы
         if(checkMathDeystvie(s)){//ѕраверка на допустимость действий
-            return "стоп";
+            int flag=1;
+            while(flag){//ищем и считаем сначало деление и умножение
+                flag=0;
+                for(int i=0;s[i]!='\0';i++){
+                    if((s[i]=='/')||(s[i]=='*')){
+                        flag=1;
+                        s=vichisl(s,i);
+                        //printf("%s\n",s);
+                        break;
+                    }
+                }
+            }
+            flag=1;
+            while(flag){//ищем и считаем сложение и вычитание
+                flag=0;
+                for(int i=0;s[i]!='\0';i++){
+                    if(((s[i]=='+')||(s[i]=='-'))&&(i!=0)){
+                        flag=1;
+                        s=vichisl(s,i);
+                        //printf("%s\n",s);
+                        break;
+                    }
+                }
+            }
+            return s;
         }else{
             return "Ѕыли введены недопустимые дл€ этого калькул€тора действи€!";
         }
@@ -33,6 +56,6 @@ int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
     printf("¬ведите выражение: \n");
-    printf("\n%s\n",vichisl("22345*45656+1243435-5645",5));
+    printf("\n%s\n",calc("-22345+45656+1243*435*-5645+23434-23445"));
     return 0;
 }
