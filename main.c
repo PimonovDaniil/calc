@@ -22,7 +22,7 @@ char* calc(char* mass){
                     if((s[i]=='/')||(s[i]=='*')){
                         flag=1;
                         s=vichisl(s,i);
-                        //printf("%s\n",s);
+                        printf("%s\n",s);
                         break;
                     }
                 }
@@ -34,7 +34,7 @@ char* calc(char* mass){
                     if(((s[i]=='+')||(s[i]=='-'))&&(i!=0)){
                         flag=1;
                         s=vichisl(s,i);
-                        //printf("%s\n",s);
+                        printf("%s\n",s);
                         break;
                     }
                 }

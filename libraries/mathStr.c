@@ -206,7 +206,7 @@ char* delenie(char* str1, char* str2){
     char* chisl= malloc(lenStr(s1)+1);
     copyStr2(chisl,s1);
     char* res="";//результат
-    printf("%s\n%s\n",s1,s2);
+    //printf("%s\n%s\n",s1,s2);
     while(bolsheChisl(chisl,s2)){
         int i=0;
         for( i=0;lenStr(chisl);i++){
@@ -221,7 +221,7 @@ char* delenie(char* str1, char* str2){
         while(bolsheChisl(mem,s2)){
             printf(" \b");
             mem=minusStrChisl(mem,s2);
-            printf("%s\n",mem);
+            //printf("%s\n",mem);
             printf(" \b");
             resMem=plusStrChisl(resMem,"1");
             printf(" \b");

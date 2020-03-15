@@ -99,10 +99,18 @@ char* vichisl(char* s, int num){
     if(i1>0){
         str1=copyStr(s,0,i1-1);
     }
+    char* dey=deystv(res,s[num],res2);
+    if((dey[0]=='-')&&(str1[lenStr(str1)-1]=='+')){
+        str1[lenStr(str1)-1]='\0';
+    }
+    if((!checkZnack(dey[0]))&&(!checkZnack(str1[lenStr(str1)-1]))&&(str1[lenStr(str1)-1]!='\0')){
+        str1=strPlus(str1,"+");
+    }
     char* str2="";
     if(s[j1+1]!='\0'){
         str2=copyStr(s,j1+1,lenStr(s)-1);
     }
     //printf("\n|%s|\n|%s|\n",res,res2);
-    return strPlus(str1,strPlus(deystv(res,s[num],res2),str2));
+    //printf("%s\n",dey);
+    return strPlus(str1,strPlus(dey,str2));
 }
