@@ -33,6 +33,6 @@ int main()
 {
     setlocale(LC_CTYPE,"RUSSIAN");
     printf("¬ведите выражение: \n");
-    printf("%s\n",vichisl("+22345*45656+1243435-5645",6));
+    printf("\n%s\n",vichisl("22345*45656+1243435-5645",5));
     return 0;
 }

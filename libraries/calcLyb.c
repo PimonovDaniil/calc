@@ -74,11 +74,13 @@ char* vichisl(char* s, int num){
     int i1=0;
     for(i1=num-1;i1>=0;i1--){
         res=copyStr(s,i1,num-1);
+
         if(checkZnack(res[0])){
             break;
         }
     }
-    if(res[0]!='-'){
+    //printf("%d",i1);
+    if((res[0]!='-')&&checkZnack(res[0])){
         i1++;
         res++;
     }
@@ -94,10 +96,13 @@ char* vichisl(char* s, int num){
     j1--;
     res2=copyStr(s,num+1,j1);
     char* str1="";
-    str1=copyStr(s,0,i1-1);
+    if(i1>0){
+        str1=copyStr(s,0,i1-1);
+    }
     char* str2="";
     if(s[j1+1]!='\0'){
         str2=copyStr(s,j1+1,lenStr(s)-1);
     }
+    //printf("\n|%s|\n|%s|\n",res,res2);
     return strPlus(str1,strPlus(deystv(res,s[num],res2),str2));
 }
